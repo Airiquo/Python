@@ -25,8 +25,9 @@ while loop:
 
     elif choice == "2":
         delete = int(input("Enter Task to Delete: "))
-        tasks_list.pop(delete - 1)
-
+        delete_task = list(tasks.items())[delete - 1]
+        delete_key = delete_task[0]
+        del tasks[delete_key]
     elif choice == "3":
         #selects index
         choice = int(input("Select Task to mark as done: "))
